@@ -1,0 +1,126 @@
+body {
+    background: rgb(26, 25, 25);
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 90%;
+    padding-top: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+.navigation,
+.main-cont,
+.side-bar {
+    height: 100%;
+    border-radius: 1rem;
+    background: black;
+}
+.navigation {
+    width: 5%;
+}
+.main-cont {
+    width: 70%;
+}
+.main-top {
+    width: 100%;
+    display: flex;
+}
+.click-nav {
+    height: 2.4rem;
+    margin: 2.1rem 0 0 2rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+.click-nav:hover {
+    background:rgb(80, 76, 76);
+}
+.main-heading {
+    color: white; 
+    padding: 0.5em 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+.pic-sec {
+    width: 93%;
+    background:rgb(80, 76, 76);
+    height: 7rem;
+    border-radius: inherit;
+    margin: 0 0 0 2em;
+}
+.side-bar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+}
+.calender,
+.tasks {
+    background: black;
+    border-radius: 1rem;
+    width: 100%;
+    height: 47%;
+}
+h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.calender,
+.tasks,
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation {
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* Mediia Query */
+
+@media (max-width: 920px) {
+    .navigation {
+        width: calc(5% + 5%);
+    }
+    .main-cont {
+        width: calc(70% - 15%);
+    }
+    .click-nav {
+        display: none;
+    }
+    .main-heading {
+        font-size: calc(2rem - .6rem)
+    }
+    .side-bar {
+        width: calc(20% + 10%);
+    }
+    .pic-sec {
+        width: calc(90% - 4%);
+    }
+}
+@media (max-width: 600px) {
+    .navigation, 
+    .side-bar {
+        display: none;
+    }
+    .click-nav {
+        display: initial;
+    }
+    .main-heading {
+        font-size: calc(2rem - 1rem);
+        margin: 1.7em 0 1.5em 0;
+    }
+    .pic-sec {
+        width: calc(90% - 10%);
+    }
+}
